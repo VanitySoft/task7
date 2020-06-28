@@ -27,7 +27,7 @@ public class FileAppendExampleTest {
 			//create a new file before appending, of it exists just use the existing file
 			new File("myfile.txt").createNewFile();
 			
-		    Files.write(Paths.get("myfile.txt"), "the text".getBytes(), StandardOpenOption.APPEND);
+		    Files.write(Paths.get("myfile.txt"), appendThisText.getBytes(), StandardOpenOption.APPEND);
 		    
 		    Assert.assertTrue( new File("myfile.txt").canRead());
 		}catch (IOException e) {
